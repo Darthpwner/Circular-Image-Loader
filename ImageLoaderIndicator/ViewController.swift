@@ -25,8 +25,7 @@ class ViewController: UIViewController {
     // just waiting on the app to be in front of me
     // going to start the animation now.
     super.viewDidAppear(animated)
-      let stringURL = "http://www.raywenderlich.com/wp-content/uploads/2015/02/mac-glasses.jpeg"
-    myCustomImageView.url = stringURL
+    myCustomImageView.animateCircle()
   }
   
 }
