@@ -63,16 +63,21 @@ class CircularLoaderView: UIView {
     }
     
     func displayStatus() {
-        let sampleTextField = UITextField(frame: CGRectMake(20, 100, 300, 40))
-        sampleTextField.placeholder = "Enter text here"
-        sampleTextField.font = UIFont.systemFontOfSize(20)
-        sampleTextField.textColor = UIColor.whiteColor()
-        sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
-        self.addSubview(sampleTextField)
+        let statusLabel = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        statusLabel.center = CGPointMake(160, 284)
+        statusLabel.textAlignment = NSTextAlignment.Center
+        statusLabel.textColor = UIColor.whiteColor()
+        statusLabel.text = "(Up)loading"
+        self.addSubview(statusLabel)
     }
     
     func displayPercentage() {
-        
+//        let statusLabel = UILabel(frame: CGRectMake(0, -1000, 200, 21))
+//        statusLabel.center = CGPointMake(160, 284)
+//        statusLabel.textAlignment = NSTextAlignment.Center
+//        statusLabel.textColor = UIColor.whiteColor()
+//        statusLabel.text = "200%"
+//        self.addSubview(statusLabel)
     }
     
     func circleFrame() -> CGRect {
