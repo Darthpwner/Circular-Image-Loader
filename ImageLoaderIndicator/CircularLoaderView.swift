@@ -65,7 +65,8 @@ class CircularLoaderView: UIView {
     func displayStatus() {
         let sampleTextField = UITextField(frame: CGRectMake(20, 100, 300, 40))
         sampleTextField.placeholder = "Enter text here"
-        sampleTextField.font = UIFont.systemFontOfSize(15)
+        sampleTextField.font = UIFont.systemFontOfSize(20)
+        sampleTextField.textColor = UIColor.whiteColor()
         sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
         self.addSubview(sampleTextField)
     }
