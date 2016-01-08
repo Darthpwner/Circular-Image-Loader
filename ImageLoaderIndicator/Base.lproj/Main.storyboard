@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="163-c9-wwo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="qUL-yT-PPc">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ImageLoaderIndicator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="163-c9-wwo" customClass="ViewController" customModule="ImageLoaderIndicator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="N8w-2I-7jK"/>
+                        <viewControllerLayoutGuide type="bottom" id="XhY-Jz-AdU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="FcW-hr-3WB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bun-vB-4MN" customClass="CustomImageView" customModule="ImageLoaderIndicator" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBA-ul-qGM" customClass="CustomImageView" customModule="ImageLoaderIndicator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bun-vB-4MN" secondAttribute="bottom" id="DSj-j5-EAy"/>
-                            <constraint firstItem="bun-vB-4MN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="Mow-Qc-2T4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bun-vB-4MN" secondAttribute="trailing" constant="-20" id="dXh-je-LeB"/>
-                            <constraint firstItem="bun-vB-4MN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="pRl-BM-mLB"/>
+                            <constraint firstItem="LBA-ul-qGM" firstAttribute="centerX" secondItem="FcW-hr-3WB" secondAttribute="centerX" id="GhL-Ok-fqJ"/>
+                            <constraint firstItem="LBA-ul-qGM" firstAttribute="width" secondItem="FcW-hr-3WB" secondAttribute="width" id="H2A-ba-iIK"/>
+                            <constraint firstItem="LBA-ul-qGM" firstAttribute="centerY" secondItem="FcW-hr-3WB" secondAttribute="centerY" id="Lkn-fk-rHv"/>
+                            <constraint firstItem="LBA-ul-qGM" firstAttribute="height" secondItem="FcW-hr-3WB" secondAttribute="height" id="aNv-1n-43j"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myCustomImageView" destination="bun-vB-4MN" id="Vao-Aj-Lty"/>
+                        <outlet property="myCustomImageView" destination="LBA-ul-qGM" id="No7-iG-7ys"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjM-Ag-urO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="294"/>
+            <point key="canvasLocation" x="170" y="86"/>
         </scene>
     </scenes>
 </document>

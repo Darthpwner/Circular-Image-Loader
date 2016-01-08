@@ -12,6 +12,7 @@ class CircularLoaderView: UIView {
     
     let circlePathLayer = CAShapeLayer()
     let circleRadius: CGFloat = 100.0
+    var circleCenter: CGPoint = CGPoint()
     
     var progress: CGFloat {
         get {
@@ -38,6 +39,9 @@ class CircularLoaderView: UIView {
         super.init(coder: aDecoder)
         configure()
     }
+    func findCircleCenter(center: CGPoint){
+        circleCenter = center
+    }
     
     func configure() {
         circlePathLayer.frame = bounds
@@ -58,7 +62,10 @@ class CircularLoaderView: UIView {
     }
     
     func circlePath() -> UIBezierPath {
-        return UIBezierPath(ovalInRect: circleFrame())
+        //return UIBezierPath(ovalInRect: circleFrame())
+       
+        
+        return UIBezierPath(arcCenter: CGPoint(x: circleCenter.x-circleRadius, y: circleCenter.y), radius: circleRadius, startAngle: CGFloat (-M_PI_2), endAngle: CGFloat (M_PI + M_PI_2), clockwise: true)
     }
     
     override func layoutSubviews() {

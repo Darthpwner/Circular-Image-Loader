@@ -16,6 +16,7 @@ class CustomImageView: UIImageView {
   
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.progressIndicatorView.findCircleCenter(self.center)
         addSubview(self.progressIndicatorView)
         progressIndicatorView.frame = bounds
         progressIndicatorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
