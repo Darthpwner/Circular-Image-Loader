@@ -11,7 +11,7 @@ import UIKit
 class CircularLoaderView: UIView {
     
     let circlePathLayer = CAShapeLayer()
-    let circleRadius: CGFloat = 100.0
+    var circleRadius: CGFloat = 100.0   //Needs a default value
     var circleCenter: CGPoint = CGPoint()
     
     var progress: CGFloat {
@@ -41,6 +41,7 @@ class CircularLoaderView: UIView {
     }
     func findCircleCenter(center: CGPoint){
         circleCenter = center
+        circleRadius = (circleCenter.x*2)*0.15
     }
     
     func configure() {
@@ -51,6 +52,26 @@ class CircularLoaderView: UIView {
         layer.addSublayer(circlePathLayer)
         backgroundColor = UIColor.orangeColor()
         progress = 0
+        
+        displayLogo()
+        displayStatus()
+        displayPercentage()
+    }
+    
+    func displayLogo() {
+        
+    }
+    
+    func displayStatus() {
+        let sampleTextField = UITextField(frame: CGRectMake(20, 100, 300, 40))
+        sampleTextField.placeholder = "Enter text here"
+        sampleTextField.font = UIFont.systemFontOfSize(15)
+        sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
+        self.addSubview(sampleTextField)
+    }
+    
+    func displayPercentage() {
+        
     }
     
     func circleFrame() -> CGRect {
@@ -62,9 +83,6 @@ class CircularLoaderView: UIView {
     }
     
     func circlePath() -> UIBezierPath {
-        //return UIBezierPath(ovalInRect: circleFrame())
-       
-        
         return UIBezierPath(arcCenter: CGPoint(x: circleCenter.x-circleRadius, y: circleCenter.y), radius: circleRadius, startAngle: CGFloat (-M_PI_2), endAngle: CGFloat (M_PI + M_PI_2), clockwise: true)
     }
     
