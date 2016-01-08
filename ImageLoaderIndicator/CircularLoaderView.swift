@@ -84,7 +84,7 @@ class CircularLoaderView: UIView {
     }
     
     func circlePath() -> UIBezierPath {
-        return UIBezierPath(arcCenter: CGPoint(x: circleCenter.x - circleRadius, y: circleCenter.y - circleRadius), radius: circleRadius, startAngle: CGFloat (-M_PI_2), endAngle: CGFloat (M_PI + M_PI_2), clockwise: true)
+        return UIBezierPath(arcCenter: CGPointMake(CGRectGetMidX(self.frame), (2 * self.frame.height) / 5), radius: circleRadius, startAngle: CGFloat (-M_PI_2), endAngle: CGFloat (M_PI + M_PI_2), clockwise: true)
     }
     
     override func layoutSubviews() {
