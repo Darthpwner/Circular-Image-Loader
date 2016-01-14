@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,15 +20,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBA-ul-qGM" customClass="CustomImageView" customModule="ImageLoaderIndicator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="240" y="240" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LBA-ul-qGM" secondAttribute="height" multiplier="1:1" id="N2E-wy-crn"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LBA-ul-qGM" firstAttribute="centerX" secondItem="FcW-hr-3WB" secondAttribute="centerX" id="GhL-Ok-fqJ"/>
-                            <constraint firstItem="LBA-ul-qGM" firstAttribute="width" secondItem="FcW-hr-3WB" secondAttribute="width" id="H2A-ba-iIK"/>
                             <constraint firstItem="LBA-ul-qGM" firstAttribute="centerY" secondItem="FcW-hr-3WB" secondAttribute="centerY" id="Lkn-fk-rHv"/>
-                            <constraint firstItem="LBA-ul-qGM" firstAttribute="height" secondItem="FcW-hr-3WB" secondAttribute="height" id="aNv-1n-43j"/>
+                            <constraint firstItem="LBA-ul-qGM" firstAttribute="height" secondItem="FcW-hr-3WB" secondAttribute="height" multiplier="0.2" id="aNv-1n-43j"/>
                         </constraints>
                     </view>
                     <connections>

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     // just waiting on the app to be in front of me
     // going to start the animation now.
     super.viewDidAppear(animated)
+    myCustomImageView.initProgressIndicator(Int(self.myCustomImageView.bounds.width), height: Int(self.myCustomImageView.bounds.height))
     myCustomImageView.animateCircle()
   }
   

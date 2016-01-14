@@ -11,15 +11,17 @@ import UIKit
 
 class CustomImageView: UIImageView {
   
-    let progressIndicatorView = CircularLoaderView(frame: CGRectZero)
-  var timer: NSTimer = NSTimer()
+    var progressIndicatorView: CircularLoaderView = CircularLoaderView()
+    var timer: NSTimer = NSTimer()
   
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.progressIndicatorView.findCircleCenter(self.center)
-        addSubview(self.progressIndicatorView)
-        progressIndicatorView.frame = bounds
+    }
+  func initProgressIndicator(width: Int, height: Int){
+        progressIndicatorView.frame = CGRect(x: 0, y: 0, width: width, height: height)
         progressIndicatorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        progressIndicatorView.circleRadius = CGFloat(width/2)
+        addSubview(self.progressIndicatorView)
     }
     func animateCircle() {
         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("animate"), userInfo: nil, repeats: true)
