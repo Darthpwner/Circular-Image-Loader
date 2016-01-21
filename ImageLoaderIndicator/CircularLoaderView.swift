@@ -49,7 +49,38 @@ class CircularLoaderView: UIView {
         layer.addSublayer(circlePathLayer)
         backgroundColor = UIColor.orangeColor()
         progress = 0
+        
+        displayLogo()
+        displayStatus()
+        displayPercentage()
     }
+    
+    func displayLogo() {
+        var imageViewObject :UIImageView
+        imageViewObject = UIImageView(frame:CGRectMake(0, 0, 100, 100));
+        imageViewObject.image = UIImage(named:"Lighthouse-Image.png")
+        imageViewObject.contentMode = UIViewContentMode.ScaleToFill
+        self.addSubview(imageViewObject)
+    }
+    
+    func displayStatus() {
+        let statusLabel = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        statusLabel.center = CGPointMake(160, 284)
+        statusLabel.textAlignment = NSTextAlignment.Center
+        statusLabel.textColor = UIColor.whiteColor()
+        statusLabel.text = "(Up)loading"
+        self.addSubview(statusLabel)
+    }
+    
+    func displayPercentage() {
+        //        let statusLabel = UILabel(frame: CGRectMake(0, -1000, 200, 21))
+        //        statusLabel.center = CGPointMake(160, 284)
+        //        statusLabel.textAlignment = NSTextAlignment.Center
+        //        statusLabel.textColor = UIColor.whiteColor()
+        //        statusLabel.text = "200%"
+        //        self.addSubview(statusLabel)
+    }
+
     
     func circleFrame() -> CGRect {
         let circleFrame = CGRect(x: 0, y: 0, width: 2*circleRadius, height: 2*circleRadius)

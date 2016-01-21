@@ -29,6 +29,7 @@
 		129077C21A73F135006516E0 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 129077B21A73F134006516E0 /* UIImageView+HighlightedWebCache.m */; };
 		129077C31A73F135006516E0 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 129077B41A73F134006516E0 /* UIImageView+WebCache.m */; };
 		129077C41A73F135006516E0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 129077B61A73F134006516E0 /* UIView+WebCacheOperation.m */; };
+		6BB7E5EF1C509C49002CEAC6 /* Lighthouse-Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB7E5EE1C509C49002CEAC6 /* Lighthouse-Image.png */; };
 		790CC21A1A93DDF600FC660D /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790CC2191A93DDF600FC660D /* CircularLoaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		129077B41A73F134006516E0 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		129077B51A73F134006516E0 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		129077B61A73F134006516E0 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		6BB7E5EE1C509C49002CEAC6 /* Lighthouse-Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lighthouse-Image.png"; sourceTree = "<group>"; };
 		790CC2191A93DDF600FC660D /* CircularLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularLoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,13 +147,14 @@
 				129077C51A73F161006516E0 /* SDWebImage */,
 				121A0ED01A4FFE1700E07EC5 /* AppDelegate.swift */,
 				121A0ED21A4FFE1700E07EC5 /* ViewController.swift */,
+				6BB7E5EE1C509C49002CEAC6 /* Lighthouse-Image.png */,
+				790CC2191A93DDF600FC660D /* CircularLoaderView.swift */,
 				129077371A73A886006516E0 /* CustomImageView.swift */,
 				121A0ED41A4FFE1700E07EC5 /* Main.storyboard */,
 				121A0ED71A4FFE1700E07EC5 /* Images.xcassets */,
 				121A0ED91A4FFE1700E07EC5 /* LaunchScreen.xib */,
 				121A0ECE1A4FFE1700E07EC5 /* Supporting Files */,
 				129077991A73F134006516E0 /* ImageLoaderIndicator-Bridging-Header.h */,
-				790CC2191A93DDF600FC660D /* CircularLoaderView.swift */,
 			);
 			path = ImageLoaderIndicator;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				121A0ED61A4FFE1700E07EC5 /* Main.storyboard in Resources */,
 				121A0EDB1A4FFE1700E07EC5 /* LaunchScreen.xib in Resources */,
 				121A0ED81A4FFE1700E07EC5 /* Images.xcassets in Resources */,
+				6BB7E5EF1C509C49002CEAC6 /* Lighthouse-Image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
