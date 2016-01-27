@@ -14,6 +14,8 @@ class CircularLoaderView: UIView {
     var circleRadius: CGFloat = 0   //Needs a default value
     var circleCenter: CGPoint = CGPoint()
     
+    let statusLabel = UILabel(frame: CGRectMake(0, 0, 200, 21))
+    
     var progress: CGFloat {
         get {
             return circlePathLayer.strokeEnd
@@ -64,12 +66,13 @@ class CircularLoaderView: UIView {
     }
     
     func displayStatus() {
-        let statusLabel = UILabel(frame: CGRectMake(0, 0, 200, 21))
         statusLabel.center = CGPointMake(65, 50)
 //        self.frame.width, self.frame.height
         statusLabel.textAlignment = NSTextAlignment.Center
         statusLabel.textColor = UIColor.whiteColor()
         statusLabel.text = "(Up)loading"
+        
+//        layoutSubviews()
         self.addSubview(statusLabel)
     }
     
@@ -96,6 +99,8 @@ class CircularLoaderView: UIView {
         super.layoutSubviews()
         circlePathLayer.frame = bounds
         circlePathLayer.path = circlePath().CGPath
+        
+        statusLabel.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidX(self.bounds))
     }
 
 }
