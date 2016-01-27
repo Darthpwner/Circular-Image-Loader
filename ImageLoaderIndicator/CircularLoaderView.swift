@@ -54,12 +54,13 @@ class CircularLoaderView: UIView {
         backgroundColor = UIColor.orangeColor()
         progress = 0
         
-      //  displayLogo()
+        //displayLogo() //Need help shrinking the image down
         displayStatus()
         displayPercentage()
     }
     
     func displayLogo() {
+        imageViewObject.center = CGPointMake(65, 50)
         imageViewObject.image = UIImage(named:"Lighthouse-Image.png")
         imageViewObject.contentMode = UIViewContentMode.ScaleToFill
         
@@ -80,6 +81,7 @@ class CircularLoaderView: UIView {
         percentageLabel.textAlignment = NSTextAlignment.Center
         percentageLabel.textColor = UIColor.whiteColor()
         percentageLabel.text = "100%"
+        
         self.addSubview(percentageLabel)
     }
 
@@ -100,7 +102,6 @@ class CircularLoaderView: UIView {
         
         statusLabel.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
         percentageLabel.center = CGPointMake(CGRectGetMidX(self.bounds), 4 * frame.height / 5)
-//        imageViewObject.center = CGPointMake(CGRectGetMidX(self.bounds), 4 * frame.height / 5)
+        imageViewObject.center = CGPointMake(CGRectGetMidX(self.bounds), 1 * frame.height / 5)
     }
-
 }
