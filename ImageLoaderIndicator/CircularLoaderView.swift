@@ -14,7 +14,9 @@ class CircularLoaderView: UIView {
     var circleRadius: CGFloat = 0   //Needs a default value
     var circleCenter: CGPoint = CGPoint()
     
-    let statusLabel = UILabel(frame: CGRectMake(0, 0, 200, 21))
+    let imageViewObject = UIImageView(frame:CGRectMake(0, 0, 100, 100));
+    let statusLabel = UILabel(frame: CGRectMake(0, 0, 200, 20))
+    let percentageLabel = UILabel(frame: CGRectMake(0, 0, 200, 20))
     
     var progress: CGFloat {
         get {
@@ -52,37 +54,33 @@ class CircularLoaderView: UIView {
         backgroundColor = UIColor.orangeColor()
         progress = 0
         
-        //displayLogo()
+      //  displayLogo()
         displayStatus()
         displayPercentage()
     }
     
     func displayLogo() {
-        var imageViewObject :UIImageView
-        imageViewObject = UIImageView(frame:CGRectMake(0, 0, 100, 100));
         imageViewObject.image = UIImage(named:"Lighthouse-Image.png")
         imageViewObject.contentMode = UIViewContentMode.ScaleToFill
+        
         self.addSubview(imageViewObject)
     }
     
     func displayStatus() {
         statusLabel.center = CGPointMake(65, 50)
-//        self.frame.width, self.frame.height
         statusLabel.textAlignment = NSTextAlignment.Center
         statusLabel.textColor = UIColor.whiteColor()
         statusLabel.text = "(Up)loading"
         
-//        layoutSubviews()
         self.addSubview(statusLabel)
     }
     
     func displayPercentage() {
-        //        let statusLabel = UILabel(frame: CGRectMake(0, -1000, 200, 21))
-        //        statusLabel.center = CGPointMake(160, 284)
-        //        statusLabel.textAlignment = NSTextAlignment.Center
-        //        statusLabel.textColor = UIColor.whiteColor()
-        //        statusLabel.text = "200%"
-        //        self.addSubview(statusLabel)
+        percentageLabel.center = CGPointMake(65, 50)
+        percentageLabel.textAlignment = NSTextAlignment.Center
+        percentageLabel.textColor = UIColor.whiteColor()
+        percentageLabel.text = "100%"
+        self.addSubview(percentageLabel)
     }
 
     
@@ -100,7 +98,9 @@ class CircularLoaderView: UIView {
         circlePathLayer.frame = bounds
         circlePathLayer.path = circlePath().CGPath
         
-        statusLabel.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidX(self.bounds))
+        statusLabel.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
+        percentageLabel.center = CGPointMake(CGRectGetMidX(self.bounds), 4 * frame.height / 5)
+//        imageViewObject.center = CGPointMake(CGRectGetMidX(self.bounds), 4 * frame.height / 5)
     }
 
 }
