@@ -50,7 +50,7 @@ class CircularLoaderView: UIView {
         backgroundColor = UIColor.orangeColor()
         progress = 0
         
-        displayLogo()
+        //displayLogo()
         displayStatus()
         displayPercentage()
     }
@@ -65,7 +65,8 @@ class CircularLoaderView: UIView {
     
     func displayStatus() {
         let statusLabel = UILabel(frame: CGRectMake(0, 0, 200, 21))
-        statusLabel.center = CGPointMake(160, 284)
+        statusLabel.center = CGPointMake(65, 50)
+//        self.frame.width, self.frame.height
         statusLabel.textAlignment = NSTextAlignment.Center
         statusLabel.textColor = UIColor.whiteColor()
         statusLabel.text = "(Up)loading"
