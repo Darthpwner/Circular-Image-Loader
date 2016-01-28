@@ -21,12 +21,12 @@ class CircularLoaderView: UIView {
     //
     
     //Constants
-    let PERCENTAGE_LABEL_HEIGHT: CGFloat = 4/5
-    let IMAGE_VIEW_OBJECT_X: CGFloat = 2/5
-    let IMAGE_VIEW_OBJECT_Y: CGFloat = 1/5
+    let PERCENTAGE_LABEL_HEIGHT: CGFloat = 3.5/5
+    let IMAGE_VIEW_OBJECT_X: CGFloat = 1.75/5
+    let IMAGE_VIEW_OBJECT_Y: CGFloat = 0.5/5
     
-    let IMAGE_VIEW_OBJECT_WIDTH: CGFloat = 25
-    let IMAGE_VIEW_OBJECT_HEIGHT: CGFloat = 25
+    let IMAGE_VIEW_OBJECT_WIDTH: CGFloat = 50
+    let IMAGE_VIEW_OBJECT_HEIGHT: CGFloat = 50
     //
     
     var progress: CGFloat {
