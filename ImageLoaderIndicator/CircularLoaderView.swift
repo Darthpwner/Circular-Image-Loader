@@ -14,9 +14,20 @@ class CircularLoaderView: UIView {
     var circleRadius: CGFloat = 0   //Needs a default value
     var circleCenter: CGPoint = CGPoint()
     
-    let imageViewObject = UIImageView(frame:CGRectMake(0, 0, 100, 100));
+    let imageViewObject = UIImageView()
+    //Values need to be hardcoded for some reason
     let statusLabel = UILabel(frame: CGRectMake(0, 0, 200, 20))
     let percentageLabel = UILabel(frame: CGRectMake(0, 0, 200, 20))
+    //
+    
+    //Constants
+    let PERCENTAGE_LABEL_HEIGHT: CGFloat = 4/5
+    let IMAGE_VIEW_OBJECT_X: CGFloat = 2/5
+    let IMAGE_VIEW_OBJECT_Y: CGFloat = 1/5
+    
+    let IMAGE_VIEW_OBJECT_WIDTH: CGFloat = 25
+    let IMAGE_VIEW_OBJECT_HEIGHT: CGFloat = 25
+    //
     
     var progress: CGFloat {
         get {
@@ -60,11 +71,7 @@ class CircularLoaderView: UIView {
     }
     
     func displayLogo() {
-        imageViewObject.center = CGPointMake(65, 50)    //Line doesn't do shit
-
-        
         imageViewObject.image = UIImage(named:"Lighthouse-Image.png")
-        imageViewObject.contentMode = UIViewContentMode.ScaleToFill //Line doesn't do shit
         
         self.addSubview(imageViewObject)
     }
@@ -101,8 +108,7 @@ class CircularLoaderView: UIView {
         circlePathLayer.path = circlePath().CGPath
         
         statusLabel.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
-        percentageLabel.center = CGPointMake(CGRectGetMidX(self.bounds), 4 * frame.height / 5)
-//        imageViewObject.center = CGPointMake(CGRectGetMidX(self.bounds), 1 * frame.height / 5)  //Fix this crap
-        imageViewObject.frame = CGRectMake(2 * frame.width / 5, 1 * frame.height / 5, 20, 20);
+        percentageLabel.center = CGPointMake(CGRectGetMidX(self.bounds), PERCENTAGE_LABEL_HEIGHT * frame.height)
+        imageViewObject.frame = CGRectMake(IMAGE_VIEW_OBJECT_X * frame.width, IMAGE_VIEW_OBJECT_Y * frame.height, IMAGE_VIEW_OBJECT_WIDTH, IMAGE_VIEW_OBJECT_HEIGHT);
     }
 }
