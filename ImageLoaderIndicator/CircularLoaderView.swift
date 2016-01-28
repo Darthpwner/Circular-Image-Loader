@@ -9,6 +9,9 @@
 import UIKit
 
 class CircularLoaderView: UIView {
+    func updateTextValue(x: CGFloat) {
+        percentageLabel.text = "\(progress * 100)%"
+    }
     
     let circlePathLayer = CAShapeLayer()
     var circleRadius: CGFloat = 0   //Needs a default value
@@ -87,7 +90,6 @@ class CircularLoaderView: UIView {
     func displayPercentage() {
         percentageLabel.textAlignment = NSTextAlignment.Center
         percentageLabel.textColor = UIColor.whiteColor()
-        percentageLabel.text = "100%"
         
         self.addSubview(percentageLabel)
     }

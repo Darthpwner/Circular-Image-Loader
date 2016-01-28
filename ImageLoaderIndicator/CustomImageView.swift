@@ -27,7 +27,8 @@ class CustomImageView: UIImageView {
         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("animate"), userInfo: nil, repeats: true)
     }
     func animate(){
-        self.progressIndicatorView.progress+=0.1
+        self.progressIndicatorView.progress += 0.1
+        progressIndicatorView.updateTextValue(self.progressIndicatorView.progress)
         if(self.progressIndicatorView.progress == 1.0){
           timer.invalidate()
         }
